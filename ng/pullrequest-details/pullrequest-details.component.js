@@ -27,7 +27,7 @@ angular.
                 self.merge_commit = response.data;
               });
               Promise.all([p1, p2]).then(function(){
-                console.log(self.git_hash)
+                console.log(self)
                 self.diff_url = $rootScope.projects[self.project_slug]['github_repo'] + '/' + 'compare/'+ self.dest_commit['git_hash'] + '..' + self.merge_commit['git_hash']
               });
 
